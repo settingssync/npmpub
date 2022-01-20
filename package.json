@@ -1,11 +1,14 @@
 {
-  "name": "npmpub",
-  "version": "0.1.0",
-  "private": true,
+  "name": "emo-test1",
+  "version": "0.1.11",
+  "private": false,
+  "main": "dist/emo-test.umd.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "buildCom": "vue-cli-service build --target lib --name emo-test index.js",
+    "publish": "npm run buildCom && npm version patch && npm publish"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -17,9 +20,11 @@
     "@vue/cli-service": "~4.5.0",
     "@vue/eslint-config-airbnb": "^5.0.2",
     "babel-eslint": "^10.1.0",
+    "css-loader": "^6.5.1",
     "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-vue": "^6.2.2",
+    "less-loader": "6.0.0",
     "vue-template-compiler": "^2.6.11"
   }
 }
